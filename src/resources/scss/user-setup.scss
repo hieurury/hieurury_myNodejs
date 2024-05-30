@@ -1,0 +1,42 @@
+.container-user-account {
+    background: linear-gradient(45deg, #020024, #8d00ff);
+}
+.main-user-register,
+.main-user-login {
+    min-height: 500px;
+}
+.form-user-login,
+.form-user-register {
+    margin-left: 100px;
+}
+.user-main-title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 24px;
+    margin: 12px 0;
+
+}
+.redirect-option {
+    font-size: 14px;
+    color: #0008;
+    text-align: right;
+    margin-top: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.redirect-option:hover {
+    color: #000;
+    text-decoration: underline;
+}
+.form-input-group:focus-within {
+    border: 1px solid rgb(84, 220, 220);
+}
+.group-message {
+    font-size: 12px;
+    opacity: .7;
+    color: red;
+    margin-top: 4px;
+}
+.invalid .form-input-group {
+    border: 1px solid red;
+}

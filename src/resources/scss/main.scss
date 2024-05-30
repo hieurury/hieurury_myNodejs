@@ -1,0 +1,25 @@
+@import url(./admin-login.css);
+@import url(./admin.css);
+@import url(./toast-message.css);
+@import url(./user-setup.css);
+@import url(./root.css);
+@import url(./footer.css);
+@import url(./me.css);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    cursor: pointer;
+}
+
+h1 {
+    text-transform: uppercase;
+    margin: 18px;
+    margin-left: 6px;
+    border-left: 3px solid #0007;
+    padding-left: 8px;
+}

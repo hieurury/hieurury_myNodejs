@@ -1,0 +1,53 @@
+<div data-message="{{message}}" class="toast-block"></div>
+
+<div class="container-form main-admin-login">
+    <div class="thumnail-admin-login">
+        <div class="thumnail-avatar-container">
+            <img src="/img/admin-img.jpg" alt="" class="thumnail-avatar">
+        </div>
+        <div class="thumnail-title">ADMINSTRATOR</div>
+    </div>
+    <form method="POST" action="/admin/login/store" class="form-admin-login">
+        <div class="admin-main-title">Trang ADMIN</div>
+        {{!-- admin name --}}
+        <label id="admin-name" class="form-input-group">
+            <i class="bi bi-person"></i>
+            <input value="{{data.name}}" placeholder="ADMIN name" type="text" name="name" id="admin-name" class="form-input">
+        </label>
+        {{!-- password --}}
+        <label id="admin-password" class="form-input-group">
+            <i class="bi bi-lock"></i>
+            <input value="{{data.password}}" placeholder="ADMIN password" type="text" name="password" id="admin-password" class="form-input">
+        </label>
+        <button type="submit" class="form-submit-btn">Đăng nhập</button>
+    </form>
+</div>
+
+<script src="/js/toastMessage.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        //xử lí toast-message
+        const toastBlock = document.querySelector('.toast-block');
+        const toastData = toastBlock.getAttribute('data-message');
+        function show(value) {
+            valueToast = {
+                success: "Thành công",
+                warning: "Cảnh báo",
+                error: "Thất bại",
+                info: "Tin nhắn"
+            }
+           let result = valueToast[value]
+            toast({
+            name: result,
+            type: value,
+            message: `admin không tồn tại, bạn không có quyền truy cập`,  
+            }, 3000)
+        }
+
+        if(toastBlock) {
+            show(toastData);
+
+        }
+    })
+</script>
+

@@ -1,0 +1,34 @@
+
+    <div data-admin="{{admin.name}}" data-message="{{message}}" class="toast-block"></div>
+
+    <h1>trang ADMIN chính</h1>
+    
+<script src="/js/toastMessage.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+       //xử lí toast-message
+        const toastBlock = document.querySelector('.toast-block');
+        const toastData = toastBlock.getAttribute('data-message');
+        const dataAdmin = toastBlock.getAttribute('data-admin');
+        function show(value) {
+            valueToast = {
+                success: "Thành công",
+                warning: "Cảnh báo",
+                error: "Thất bại",
+                info: "Tin nhắn"
+            }
+           let result = valueToast[value]
+            toast({
+            name: result,
+            type: value,
+            message: `Chào mừng trở lại. ${dataAdmin}`,  
+            }, 3000)
+        }
+
+        if(toastBlock) {
+            show(toastData);
+
+        }
+    })
+</script>

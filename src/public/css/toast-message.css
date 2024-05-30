@@ -1,0 +1,93 @@
+.toast-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  flex-grow: 1;
+}
+
+.toast-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0;
+  background-color: aliceblue;
+  border-radius: 2px;
+  margin: 4px;
+}
+
+.toast-icon, .toast-more {
+  font-size: 24px;
+  margin: 0 26px;
+}
+
+.toast-body {
+  min-width: 200px;
+}
+
+.toast-header {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  background: transparent;
+}
+
+.toast-description {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.toast-more {
+  cursor: pointer;
+}
+
+.warning {
+  border-left: 4px solid rgb(223, 189, 41);
+}
+
+.warning .toast-icon {
+  color: rgb(223, 189, 41);
+}
+
+.error {
+  border-left: 4px solid rgb(234, 18, 18);
+}
+
+.error .toast-icon {
+  color: rgb(234, 18, 18);
+}
+
+.success {
+  border-left: 4px solid rgb(88, 215, 68);
+}
+
+.success .toast-icon {
+  color: rgb(88, 215, 68);
+}
+
+.info {
+  border-left: 4px solid rgb(21, 85, 205);
+}
+
+.info .toast-icon {
+  color: rgb(21, 85, 205);
+}
+
+@keyframes showInRight {
+  from {
+    transform: translateX(calc(100% + 32px));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes hideMessage {
+  to {
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/toast-message.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;;;AAEJ;EACI;;;AAEJ;EACI;EACA;EACA;EACA;;;AAEJ;EACI;EACA;;;AAEJ;EACI;;;AAEJ;EACI;;;AAEJ;EACI;;;AAGJ;EACI;;;AAEJ;EACI;;;AAGJ;EACI;;;AAEJ;EACI;;;AAEJ;EACI;;;AAEJ;EACI;;;AAGJ;EACI;IACI;;EAEJ;IACI;;;AAIR;EACI;IACI%22,%22file%22:%22toast-message.css%22%7D */

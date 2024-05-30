@@ -1,0 +1,14 @@
+<h1>Thay đổi thông tin</h1>
+{{#with group}}
+<form method="POST" action="/admin/groups/edit/{{_id}}/change?_method=PUT">
+  <div class="form-group">
+    <label for="document-name">Tên tài liệu</label>
+    <input value="{{name}}" type="text" class="form-control" name="name" id="document-name" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="document-description">Mô tả</label>
+    <input value="{{description}}" type="text" class="form-control" name="description" id="document-description">
+  </div>
+  <button type="submit" class="btn btn-primary">Sửa đổi</button>
+{{/with}}
+</form>

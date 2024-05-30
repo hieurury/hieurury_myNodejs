@@ -1,0 +1,7 @@
+{{#with group}}
+    <h3 class="card-title">{{name}}</h3>
+    <img style="width: 600px" src="{{img}}" alt="...">
+    <form action="/me/groups/subcribe/{{_id}}?_method=PUT" method="POST">
+        <button class="btn btn-primary" type="submit">Đăng kí miễn phí</button>
+    </form>
+{{/with}}

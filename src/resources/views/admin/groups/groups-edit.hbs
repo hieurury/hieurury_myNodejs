@@ -1,0 +1,25 @@
+<h1>Các tài liệu hiện có</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Tên</th>
+      <th scope="col">Mô tả</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each groups}}
+    <tr>
+      <th scope="row">{{sum @index 1}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.description}}</td>
+      <td>
+        <a href="/admin/groups/edit/{{this.slug}}" class="btn btn-primary">Sửa</a>
+        <a href="/admin/groups/edit/restore/{{this.slug}}" class="btn btn-danger">Xoá</a>
+      </td>
+    </tr>
+    {{/each}}
+
+  </tbody>
+</table>

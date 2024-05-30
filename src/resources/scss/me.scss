@@ -1,0 +1,149 @@
+// phần navbar
+.me-navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 50px;
+    background: transparent;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+}
+.me-logo-home-page {
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ccc;
+    text-shadow: 0 2px 3px #0005;
+}
+
+.me-logo-home-page:hover {
+    text-decoration: none;
+    color: #0006;
+    cursor: pointer;
+}
+
+.me-option-control i {
+    font-size: 24px;
+    color: #ccc;
+    text-shadow: 0 2px 3px #0005;
+}
+
+.me-option-control i:hover {
+    text-decoration: none;
+    color: #0006;
+    cursor: pointer;
+}
+
+// giao diện bên trái
+.profile-layout--left {
+    padding: 0;
+}
+.profile-banner {
+    position: relative;
+}
+.profile-background {
+    background-color: aqua;
+    width: 100%;
+    padding-top: 30%;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: 0 0 5px #0008;
+}
+.profile-user {
+    position: absolute;
+    display: flex;
+    bottom: -50px;
+    align-items: flex-end;
+    margin-left: 12px;
+
+}
+.profile-user .profile-user--avatar {
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background: #ccc;
+    display: flex;
+    border-radius: 50%;
+}
+.profile-user .avatar-img {
+    width: 95%;
+    border-radius: 50%;
+}
+.profile-user--name {
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 8px;
+    margin-bottom: 8px;
+}
+.profile-content {
+ margin-top: 100px;
+ padding: 0 40px; 
+}
+.box-element {
+    max-width: 400px;
+    border: 1px solid #ccc;
+    padding: 18px 12px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.box-group {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-style: italic;
+}
+.box-group a {
+    color: #000;
+}
+
+
+//layout bên phải
+.joined-title {
+    font-size: 26px;
+    font-weight: 500;
+    margin: 12px 0;
+    text-transform: uppercase;
+}
+.groups-joined {
+    padding: 0 12px;
+}
+.groups-joined .group-inner {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    margin: 20px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 12px;
+}
+.groups-joined .group-inner:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+}
+.group-inner .group-inner-thumnail {
+    width: 250px;
+    height: 150px;
+    // object-fit: cover;
+    overflow: hidden;
+    box-shadow: 0px 0 2px #0006;
+    margin-right: 12px;
+    border-radius: 8px;
+}
+.group-inner-thumnail img {
+    width: 100%;
+    height: 100%;
+}
+.box-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.box-des {
+    font-size: 16px;
+    font-style: italic;
+}
+

@@ -1,0 +1,51 @@
+.container-user-account {
+  background: linear-gradient(45deg, #020024, #8d00ff);
+}
+
+.main-user-register,
+.main-user-login {
+  min-height: 500px;
+}
+
+.form-user-login,
+.form-user-register {
+  margin-left: 100px;
+}
+
+.user-main-title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 12px 0;
+}
+
+.redirect-option {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5333333333);
+  text-align: right;
+  margin-top: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.redirect-option:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.form-input-group:focus-within {
+  border: 1px solid rgb(84, 220, 220);
+}
+
+.group-message {
+  font-size: 12px;
+  opacity: 0.7;
+  color: red;
+  margin-top: 4px;
+}
+
+.invalid .form-input-group {
+  border: 1px solid red;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/user-setup.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAA;EACI;;;AAEJ;AAAA;EAEI;;;AAEJ;AAAA;EAEI;;;AAEJ;EACI;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;;;AAEJ;EACI;;;AAEJ;EACI;EACA;EACA;EACA;;;AAEJ;EACI%22,%22file%22:%22user-setup.css%22%7D */

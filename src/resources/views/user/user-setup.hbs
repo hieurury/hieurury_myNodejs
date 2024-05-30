@@ -1,0 +1,146 @@
+<div data-message="{{message}}" class="toast-block"></div>
+
+<div class="container-form main-user-login">
+    <div class="thumnail-form thumnail-user-login">
+        <div class="thumnail-avatar-container">
+            <img src="/img/admin-img.jpg" alt="" class="thumnail-avatar">
+        </div>
+        <div class="thumnail-title">Xin chào</div>
+    </div>
+    <form method="POST" action="/account/login/store" class="form-user-login">
+        <div class="user-main-title">Đăng nhập tài khoản</div>
+        {{!-- user name --}}
+        <div class="form-group">
+            <label id="user-name" class="form-input-group">
+                <i class="bi bi-person"></i>
+                <input placeholder="name" type="text" name="name" id="user-name" class="form-input">
+            </label>
+            <p class="group-message"></p>
+        </div>
+        {{!-- password --}}
+        <div class="form-group">
+            <label id="user-password" class="form-input-group">
+                <i class="bi bi-lock"></i>
+                <input placeholder="password" type="text" name="password" id="user-password" class="form-input">
+            </label>
+            <p class="group-message"></p>
+        </div>
+        <button type="submit" class="form-submit-btn">Đăng nhập</button>
+        <div class="redirect-option redirect-register">Đăng kí tài khoản mới</div>
+    </form>
+</div>
+
+
+<div class="container-form main-user-register d-none">
+    <div class="thumnail-user-register">
+        <div class="thumnail-avatar-container">
+            <img src="/img/admin-img.jpg" alt="" class="thumnail-avatar">
+        </div>
+        <div class="thumnail-title">Người mới</div>
+    </div>
+    <form method="POST" action="/account/register/store" class="form-user-register">
+        <div class="user-main-title">Đăng kí tài khoản</div>
+        {{!-- user name --}}
+        <div class="form-group">
+            <label id="user-name" class="form-input-group">
+                <i class="bi bi-person"></i>
+                <input placeholder="Name" type="text" rules="required" name="name" id="user-name" class="form-input name-validate">
+            </label>
+            <p class="group-message"></p>
+        </div>
+
+        {{!-- email --}}
+        <div class="form-group">
+            <label id="user-email" class="form-input-group">
+                <i class="bi bi-envelope"></i>
+                <input placeholder="email" type="text" rules="required|email" name="email" id="user-email" class="form-input email-validate">
+            </label>
+            <p class="group-message"></p>
+        </div>
+        
+        {{!-- password --}}
+        <div class="form-group">
+            <label id="user-password" class="form-input-group">
+                <i class="bi bi-lock"></i>
+                <input placeholder="Password" type="text" rules="required|min:8" name="password" id="user-password" class="form-input password-validate">
+            </label>
+            <p class="group-message"></p>
+        </div>
+
+        {{!-- gender --}}
+        {{!-- <div class="form-group">
+            <input rules="gender" value="male" type="radio" name="gender" id="gender-male"> Nam
+            <input rules="gender" value="female" type="radio" name="gender" id="gender-female"> Nữ
+            <p class="group-message"></p>
+        </div> --}}
+
+        <button type="submit" class="form-submit-btn">Đăng kí</button>
+        <div class="redirect-option redirect-login">Đã có tài khoản, đăng nhập</div>
+    </form>
+</div>
+
+<script src="/js/validator.js"></script>
+<script src="/js/toastMessage.js"></script>
+<script>
+    window.addEventListener("DOMContentLoaded", function() {
+        const mainLogin = document.querySelector('.main-user-login');
+        const mainRegister = document.querySelector('.main-user-register');
+        const formLogin = document.querySelector('.form-user-login');
+        const formRegister = document.querySelector('.form-user-register');
+        const toRegisterBtn = document.querySelector('.redirect-register');
+        const toLoginBtn = document.querySelector('.redirect-login');
+        const reSubmitBtn = mainRegister.querySelector('.form-submit-btn');
+
+
+        redirect = function(from, to) {
+            from.classList.toggle('d-none');
+            to.classList.toggle('d-none');
+        }
+
+        toRegisterBtn.addEventListener('click', function() {
+            redirect(mainLogin, mainRegister);
+        })
+        toLoginBtn.onclick = function() {
+            redirect(mainRegister, mainLogin);
+        }
+
+        validator('.form-user-register');
+
+
+        //xử lí toast-message
+        const toastBlock = document.querySelector('.toast-block');
+        const toastData = toastBlock.getAttribute('data-message');
+        console.log(toastData);
+        function show(value) {
+            valueToast = {
+                success: "Thành công",
+                warning: "Cảnh báo",
+                error: "Thất bại",
+                info: "Tin nhắn"
+            }
+            messageContent = {
+                success: "Đăng kí thành công",
+                warning: "Tài khoản đã tồn tại",
+                error: "Tài khoản không hợp lệ",
+                info: "Bạn chưa đăng nhập, vui lòng thực hiện đăng nhập!"
+            }
+            const resultName = valueToast[value]
+            const message = messageContent[value]
+            toast({
+            name: resultName,
+            type: value,
+            message  
+            }, 3000)
+        }
+
+        if(toastData) {
+            show(toastData);
+        }
+            
+        
+    })
+
+
+
+
+</script>

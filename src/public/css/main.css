@@ -1,0 +1,26 @@
+@import url(./admin-login.css);
+@import url(./admin.css);
+@import url(./toast-message.css);
+@import url(./user-setup.css);
+@import url(./root.css);
+@import url(./footer.css);
+@import url(./me.css);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin: 18px;
+  margin-left: 6px;
+  border-left: 3px solid rgba(0, 0, 0, 0.4666666667);
+  padding-left: 8px;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/main.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AACA;AACA;AACA;AACA;AACA;AACA;AAER;EACI;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA%22,%22file%22:%22main.css%22%7D */

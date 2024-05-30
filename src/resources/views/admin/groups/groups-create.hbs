@@ -1,0 +1,16 @@
+<h1>Tạo một tài liệu mới</h1>
+<form method="POST" action="/admin/groups/create/stored">
+  <div class="form-group">
+    <label for="document-name">Tiêu đề</label>
+    <input type="text" class="form-control" id="document-name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="document-description">Mô tả</label>
+    <textarea type="text" class="form-control" id="document-description" name="description"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="document-thumnail">Ảnh nền</label>
+    <input type="text" class="form-control" id="document-thumnail" name="img">
+  </div>
+  <button type="submit" class="btn btn-primary">Tạo mới</button>
+</form>

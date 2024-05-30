@@ -1,0 +1,21 @@
+<h2 style="margin-top: 12px;">DANH SÁCH NGƯỜI DÙNG HIỆN TẠI</h2>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Tên</th>
+      <th scope="col">Thư điện tử</th>
+      <th scope="col">Giới tính</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each users}}
+    <tr>
+      <th scope="row">{{sum @index 1}}</th>
+      <td>{{this.name}}</td>
+      <td><a href="mailto:"{{this.email}}"">{{this.email}}</a></td>
+      <td>{{this.gender}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -1,0 +1,14 @@
+{{#with group}}
+    <h1>Thêm video mới cho khoá {{name}}</h1>
+    <form method="POST" action="/admin/groups/{{_id}}/postVideo?_method=PUT">
+    <div class="form-group">
+        <label for="video-name">Tiêu đề</label>
+        <input type="text" class="form-control" id="video-name" name="title">
+    </div>
+    <div class="form-group">
+        <label for="video-link">Link video</label>
+        <input type="text" class="form-control" id="video-link" name="link">
+    </div>
+    <button type="submit" class="btn btn-primary">Thêm vào</button>
+    </form>
+{{/with}}

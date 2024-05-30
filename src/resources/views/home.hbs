@@ -1,0 +1,50 @@
+<div data-message="{{message}}" class="toast-block"></div>
+
+<h1>Các tài liệu hiện có</h1>
+<div style="margin: 0;" class="row">
+    {{#each groups}}
+        <div  class="col-3 card" style="width: 18rem;">
+        <img src="{{this.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <p class="card-text">{{this.description}}</p>
+            <a href="/groups/{{this.slug}}" class="btn btn-primary">Xem</a>
+        </div>
+        </div>
+    {{/each}}
+</div>
+
+<script src="/js/toastMessage.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+        //xử lí toast-message
+        const toastBlock = document.querySelector('.toast-block');
+        const toastData = toastBlock.getAttribute('data-message');
+        console.log(toastData);
+        function show(value) {
+            valueToast = {
+                success: "Thành công",
+                warning: "Cảnh báo",
+                error: "Thất bại",
+                info: "Tin nhắn"
+            }
+            messageContent = {
+                success: "Đăng nhập thành công",
+                warning: "Tài khoản đã tồn tại",
+                error: "Tài khoản không hợp lệ",
+                info: "Có sự cố xảy ra, vui lòng thử lại sau!"
+            }
+            const resultName = valueToast[value]
+            const message = messageContent[value]
+            toast({
+            name: resultName,
+            type: value,
+            message  
+            }, 3000)
+        }
+
+        if(toastData) {
+            show(toastData);
+        }
+    })
+</script>

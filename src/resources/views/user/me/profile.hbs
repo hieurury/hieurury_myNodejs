@@ -1,0 +1,83 @@
+<div class="me-navbar">
+    <a href="/" class="me-logo-home-page">
+        hieurury
+    </a>
+    <div class="me-block-control">
+        <div class="me-option-control">
+            <i class="bi bi-gear"></i>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6 profile-layout--left">
+        <div class="profile-banner">
+            <div class="profile-background"></div>
+            <div class="profile-user">
+                <div class="profile-user--avatar">
+                    <img src="https://img.freepik.com/free-psd/3d-illustration-bald-person-with-glasses_23-2149436184.jpg" alt="" class="avatar-img">
+                </div>
+                <div class="profile-user--name">{{user.name}}</div>
+            </div>
+        </div>
+        <div class="profile-content">
+            <div class="box-element">
+                <div class="box-title">Giới thiệu</div>
+                {{#if user.profile.about}}
+                <div class="box-des">{{user.profile.about}}</div>
+                {{else}}
+                <div class="box-des">Chưa có bài giới thiệu nào!</div>
+                {{/if}}
+            </div>
+
+            <div class="box-element">
+                <div class="box-title">Thông tin</div>
+                <div class="box-group">
+                    {{#if user.profile.fullName}}
+                    <div class="box-des">Tên đầy đủ: {{user.profile.fullName}}</div>
+                    {{else}}
+                    <div class="box-des">Tên đầy đủ: đã ẩn danh tính</div>
+                    {{/if}}
+
+                    {{#if user.email}}
+                    <div class="box-des">Email: {{user.email}}</div>
+                    {{else}}
+                    <div class="box-des">Email: chưa đặt email</div>
+                    {{/if}}
+
+                    {{#if user.profile.gender}}
+                    <div class="box-des">Giới tính: {{user.profile.gender}}</div>
+                    {{else}}
+                    <div class="box-des">Giới tính: không muốn bại lộ</div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-6 profile-layout--right">
+        <div class="groups-joined">
+            {{#if joinedGroups}}
+            <div class="joined-title">Các groups đã tham gia</div>
+            <div class="joined-box">
+                {{#each joinedGroups}}
+                <div class="group-inner">
+                    <a href="/groups/{{this.slug}}" class="group-inner-thumnail">
+                        <img src="{{this.img}}" alt="" class="group-inner-img">
+                    </a>
+                    <div class="group-inner-info">
+                        <div class="box-title">{{this.name}}</div>
+                        <div class="box-des">
+                           {{this.description}}
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            {{else}}
+             <div class="joined-title">Chưa tham gia nhóm nào</div>
+            {{/if}}
+        </div>
+    </div>
+</div>
