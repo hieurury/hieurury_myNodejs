@@ -5,6 +5,7 @@
 @import url(./root.css);
 @import url(./footer.css);
 @import url(./me.css);
+@import url(./group.css);
 
 * {
     box-sizing: border-box;
@@ -16,10 +17,140 @@ a {
     cursor: pointer;
 }
 
-h1 {
+h1.page-title {
+    background-image: linear-gradient(to bottom left, #553c9a, #ee4b2b);
+    color: transparent;
     text-transform: uppercase;
     margin: 18px;
     margin-left: 6px;
-    border-left: 3px solid #0007;
+    border-left: 3px solid #553c9a;
     padding-left: 8px;
+    background-clip: text;
+    
+}
+
+.container-page {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-form {
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px #0003;
+}
+.thumnail-avatar-container {
+    padding: 30px;
+    border-radius: 50%;
+    background: #eee9e9;
+}
+.thumnail-avatar {
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px #0004;
+
+}
+.thumnail-title {
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 12px;
+    font-weight: 600;
+}
+.form-input-group {
+    width: 300px;
+    background-color: #eee9e9;
+    padding: 8px 12px;
+    border-radius: 12px;
+    display: flex;
+}
+.form-input-group:hover {
+    cursor: pointer;
+}
+.form-input {
+    width: 100%;
+    margin-left: 8px;
+    background: transparent;
+    border: none;
+    outline: none;
+    content: none;
+}
+.form-submit-btn {
+    width: 100%;
+    border-radius: 12px;
+    height: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    background: rgb(10, 177, 10);
+    border: none;
+}
+
+
+//button css
+.button-normal {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: #fa6400;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+    margin-top: 24px;
+}
+  
+.button-normal:hover,
+.button-normal:focus {
+    background-color: #fb8332;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: #fff;
+    text-decoration: none;
+}
+  
+.button-normal:hover {
+    transform: translateY(-1px);
+}
+  
+.button-normal:active {
+    background-color: #c85000;
+    box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+    transform: translateY(0);
+}
+
+//important css
+.current-choose {
+    background: rgb(82, 82, 244);
+    color: #fff;
+}
+.active {
+    color: #fff !important;
 }

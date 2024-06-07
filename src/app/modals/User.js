@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
+
 const Profile = new Schema ({
     fullName: {type: String, default: null},
     avatar: {type: String, default: null},
