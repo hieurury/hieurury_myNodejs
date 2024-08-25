@@ -6,6 +6,7 @@
 @import url(./footer.css);
 @import url(./me.css);
 @import url(./group.css);
+@import url(./commu.css);
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,6 +15,11 @@
 
 a {
   cursor: pointer;
+}
+
+.embed-container {
+  width: 80%;
+  margin: auto;
 }
 
 h1.page-title {
@@ -149,6 +155,12 @@ h1.page-title {
   transform: translateY(0);
 }
 
+.button--small {
+  font-size: 12px;
+  padding: 8px 40px;
+  min-height: 1rem;
+}
+
 .current-choose {
   background: rgb(82, 82, 244);
   color: #fff;
@@ -158,4 +170,4 @@ h1.page-title {
   color: #fff !important;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/main.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAER;EACI;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAIJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA;;;AAEJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;;;AAEJ;EACI;;;AAEJ;EACI;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAKJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;AAAA;EAEI;EACA;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;;;AAIJ;EACI;EACA;;;AAEJ;EACI%22,%22file%22:%22main.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/main.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAAQ;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAER;EACI;EACA;EACA;;;AAGJ;EACI;;;AAEJ;EACI;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAIJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA;;;AAEJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;;;AAEJ;EACI;;;AAEJ;EACI;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAKJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;AAAA;EAEI;EACA;EACA;EACA;;;AAGJ;EACI;;;AAGJ;EACI;EACA;EACA;;;AAEJ;EACI;EACA;EACA;;;AAKJ;EACI;EACA;;;AAEJ;EACI%22,%22file%22:%22main.css%22%7D */

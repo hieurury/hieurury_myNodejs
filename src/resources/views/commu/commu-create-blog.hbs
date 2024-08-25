@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo bài viết</title>
+
+</head>
+<body>
+    <div class="embed-container">
+        <h1 class="page-title">tạo bài viết mới</h1>
+
+        <form method="POST" action="/commu/blog/post">
+            <h3 class="page-subtitle">Tiêu đề bài viết</h3>
+            <input type="text" class="blog-title" name="title">
+            <h3 class="page-subtitle">thumnail bài viết</h3>
+            <input type="text" class="blog-title" name="image">
+            <h3 class="page-subtitle">Nội dung bài viết</h3>
+            <textarea name="content" id="editor"></textarea>
+            <button type="submit" class="button-normal">Đăng</button>
+        </form>
+    </div>
+
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js">
+    </script><script src="https://cdn.ckbox.io/ckbox/latest/ckbox.js"></script>
+    <script type="module" src="./test.js">
+    </script>
+
+</body>
+</html>

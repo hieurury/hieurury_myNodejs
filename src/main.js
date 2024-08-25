@@ -16,7 +16,6 @@ const middleWareAuthor = require('./config/author');
 
 
 
-
 //body parser
 app.use(express.urlencoded({
     extended: true
@@ -25,13 +24,14 @@ app.use(express.urlencoded({
 //static file
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 app.use(expressSession({
     secret: 'secret-key', // Chuỗi bí mật để ký và mã hóa session ID
     resave: false, // Không lưu lại session nếu không có sự thay đổi
     saveUninitialized: false // Không tạo session nếu không có dữ liệu được lưu
 }));
 
+
+  
 //dùng các middleWare tự tạo
 app.use(middleWareAuthor);
 
@@ -49,7 +49,6 @@ app.engine('hbs', engine({
 }));
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
-
 
 
 //kết nối database

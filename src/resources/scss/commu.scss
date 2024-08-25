@@ -1,0 +1,43 @@
+.blog-container {
+    width: 100%;
+    padding: 0 16px;
+}
+.blog-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog-item {
+    width: 25%;
+    padding: 16px;
+}
+.container-img {
+    width: 100%;
+    height: 150px;
+    box-shadow: 0 0 5px #0007;
+}
+.container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content-title {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 12px;
+    white-space: nowrap; /* Ngăn không cho văn bản xuống dòng */
+    overflow: hidden; /* Ẩn phần văn bản bị tràn */
+    text-overflow: ellipsis; /* Thêm dấu ba chấm khi văn bản tràn */
+}
+.content-subtitle {
+    font-size: 12px;
+    opacity: .8;
+    margin-top: 4px;
+    white-space: nowrap; /* Ngăn không cho văn bản xuống dòng */
+    overflow: hidden; /* Ẩn phần văn bản bị tràn */
+    text-overflow: ellipsis; /* Thêm dấu ba chấm khi văn bản tràn */
+}
+
+//CSS cho phần blog/create

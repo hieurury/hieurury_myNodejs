@@ -6,6 +6,7 @@
 @import url(./footer.css);
 @import url(./me.css);
 @import url(./group.css);
+@import url(./commu.css);
 
 * {
     box-sizing: border-box;
@@ -16,7 +17,10 @@
 a {
     cursor: pointer;
 }
-
+.embed-container {
+    width: 80%;
+    margin: auto;
+}
 h1.page-title {
     background-image: linear-gradient(to bottom left, #553c9a, #ee4b2b);
     color: transparent;
@@ -144,6 +148,12 @@ h1.page-title {
     background-color: #c85000;
     box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
     transform: translateY(0);
+}
+.button--small {
+    font-size: 12px;
+    padding: 8px 40px;
+    min-height: 1rem;
+
 }
 
 //important css

@@ -1,1 +1,17 @@
-<h1>trang community</h1>
+<div class="blog-container">
+    <h1 class="page-title">các bài viết nổi bật</h1>
+    <div class="blog-content">
+        {{#each blogs}}
+        <div class="blog-item">
+            <div class="container-img">
+                <img src="{{this.image}}" alt="">
+            </div>
+            <div class="container-content">
+                <div class="content-title">{{this.title}}</div>
+                <div class="content-subtitle">{{this.author.name}}</div>
+                <a href="/commu/blog/{{this.slug}}" class="button-normal">Xem chi tiết</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="embed-container">
+    {{#if blog}}
+        <div style="margin: 24px 0;">
+            {{{blog.content}}}
+        </div>
+        <div style="text-align: right; margin-top: 32px; font-weight: 500" class="blog-author">
+            Tác giả bài viết: {{blog.author.name}}
+        </div>
+    {{else}}
+        <div class="block-notifile">
+            <h1 class="">CÓ VẺ NHƯ ĐÃ CÓ SỰ CỐ XẢY RA</h1>
+            <img src="/img/plane_2.gif" alt="" class="notifile-img">
+            <a href="/commu/blogs" class="button-normal">Về trang blog!</a>
+        </div>
+    {{/if}}
+</div>
